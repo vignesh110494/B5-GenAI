@@ -32,5 +32,4 @@ It allows users to upload Excel budget data, visualize trends, analyze budget vs
 
 ---
 
-## 📁 Project Structure
 
