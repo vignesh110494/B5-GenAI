@@ -1,6 +1,6 @@
-# 📊 BudgetVista
+# 📊 InsightBudget
 
-**BudgetVista** is an interactive Streamlit-based data visualization and budgeting analysis application.  
+**InsightBudget** is an interactive Streamlit-based data visualization and budgeting analysis application.  
 It allows users to upload Excel budget data, visualize trends, analyze budget vs actual variance, generate AI-style insights, forecast future budgets, and export reports in Excel and PDF formats.
 
 ---
