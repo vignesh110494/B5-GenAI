@@ -13,7 +13,7 @@ This project is useful for:
 ---
 
 ## 🛠️ Technologies Used
-- **Python 3.x**
+- **Python 3.13.8**
 - **PyAutoGUI**
 - **Time module**
 - **Windows OS**
