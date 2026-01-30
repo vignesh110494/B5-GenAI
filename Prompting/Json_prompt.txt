@@ -1,0 +1,49 @@
+{
+  "task": "generate_image",
+  "image_type": "photorealistic",
+  "resolution": "ultra_high_definition",
+  "aspect_ratio": "16:9",
+  "location": "Himalayan mountain range, India",
+  "environment": {
+    "terrain": "rocky mountain roads, dirt trails, river valleys",
+    "weather": "clear sky with light clouds",
+    "lighting": "natural daylight, cinematic contrast"
+  },
+  "subjects": {
+    "group": "Adventure motorcycle riders",
+    "count": "4-6 riders",
+    "motorcycle_model": "Royal Enfield Himalayan",
+    "condition": "bikes covered with dirt and dust from riding",
+    "condition2":"bike should have the india flag to show the love towards india" 
+  },
+  "riders_appearance": {
+    "gear": [
+      "full-face helmets",
+      "adventure riding jackets",
+      "riding gloves",
+      "riding boots",
+      "side panniers mounted on bikes"
+    ],
+    "condition": "jackets and bikes splashed with mud and dust to show how hard the trip is", 
+    "posture": "confident riding stance, moving through rugged terrain"
+  },
+  "scene_description": {
+    "action": "Group of riders crossing a scenic mountain pass",
+    "composition": "winding road between tall mountains with snow-capped peaks",
+    "background": "lush valleys, flowing river, dramatic Himalayan landscape",
+    "foreground": "dust trails kicked up by moving motorcycles"
+  },
+  "visual_style": {
+    "camera_angle": "low-angle wide shot",
+    "depth_of_field": "sharp focus on riders, slightly blurred background",
+    "mood": "adventurous, powerful, inspiring,sensational", 
+    "color_palette": "natural earth tones, cool mountain blues and greens"
+  },
+  "quality_settings": {
+    "detail_level": "extreme detail",
+    "texture_quality": "highly realistic dirt, fabric, metal textures",
+    "noise": "low",
+    "sharpness": "high"
+  },
+  "output_notes": "Cinematic adventure photography showcasing the raw beauty of the Himalayas and the spirit of long-distance motorcycling along with love of india" 
+}

@@ -1,0 +1,85 @@
+{
+  "prompt_type": "text_to_video",
+  "title": "Last Over Thriller – College Cricket Victory",
+  "style": {
+    "genre": "sports_drama",
+    "cinematography": "cinematic, dynamic camera movements, slow motion highlights",
+    "color_tone": "natural, warm daylight",
+    "lighting": "mild sunlight with soft shadows",
+    "realism_level": "high",
+    "mood": "tense to celebratory"
+  },
+  "environment": {
+    "location": "open cricket ground",
+    "surroundings": "lush green trees, natural landscape, open sky",
+    "weather": "clear sky, mild sun"
+  },
+  "characters": {
+    "team": "group of young students",
+    "attire": "college cricket uniforms",
+    "crowd": "teammates and students cheering from boundary line"
+  },
+  "story_sequence": [
+    {
+      "scene_id": 1,
+      "description": "Wide aerial shot of a cricket ground surrounded by greenery under mild sunlight. A group of students are playing an intense cricket match. The scoreboard shows it is the last over.",
+      "camera": "slow aerial pan transitioning to ground-level shot",
+      "duration_seconds": 6
+    },
+    {
+      "scene_id": 2,
+      "description": "The striker takes stance. The bowler runs in and bowls the first ball of the last over. The batsman hits a powerful lofted shot straight over the boundary for six runs.",
+      "camera": "ball-follow tracking shot with slow motion on bat impact",
+      "crowd_reaction": "cheers and excitement",
+      "duration_seconds": 5
+    },
+    {
+      "scene_id": 3,
+      "description": "Fielding team gathers for a quick discussion near the pitch before the second ball. Expressions show tension and strategy planning.",
+      "camera": "medium close-up shots of players talking",
+      "duration_seconds": 4
+    },
+    {
+      "scene_id": 4,
+      "description": "The bowler delivers the second ball. The batsman misses the shot. The ball strikes the pads. The umpire raises the finger for LBW. The batsman looks disappointed and walks off.",
+      "camera": "slow motion replay of ball hitting pads, close-up on umpire decision",
+      "mood": "sudden tension",
+      "duration_seconds": 6
+    },
+    {
+      "scene_id": 5,
+      "description": "A new batsman enters the ground running confidently with high energy, inspired by the iconic entrance style of MS Dhoni. He reaches the crease, taps the bat, and prepares to face the final delivery.",
+      "camera": "tracking shot following the batsman running in",
+      "mood": "hope and anticipation",
+      "duration_seconds": 6
+    },
+    {
+      "scene_id": 6,
+      "description": "Final ball of the match. The team needs 6 runs from 1 ball. The bowler runs in and bowls. The ball reaches the batsman, who swings and executes a powerful helicopter shot, sending the ball soaring over the boundary for six.",
+      "camera": "dramatic slow motion bat swing, ball flying into the sky",
+      "impact_style": "helicopter shot inspired by MS Dhoni",
+      "duration_seconds": 7
+    },
+    {
+      "scene_id": 7,
+      "description": "The team erupts in celebration. Players run onto the field, hugging, jumping, and cheering. The winning batsman is lifted by teammates. Joyful faces and triumphant atmosphere fill the ground.",
+      "camera": "handheld celebratory shots and wide crowd view",
+      "mood": "victory and celebration",
+      "duration_seconds": 6
+    }
+  ],
+  "audio": {
+    "background_music": "intense sports score transitioning to celebratory music",
+    "sound_effects": [
+      "bat hitting ball",
+      "crowd cheers",
+      "players shouting in celebration"
+    ]
+  },
+  "output_preferences": {
+    "video_length_seconds": 40,
+    "frame_rate": "24fps",
+    "resolution": "1080p",
+    "aspect_ratio": "16:9"
+  }
+}
