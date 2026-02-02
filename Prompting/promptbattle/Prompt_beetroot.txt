@@ -1,0 +1,60 @@
+{
+  "task": "text_to_video",
+  "duration_seconds": 7,
+  "style": "cartoonistic, colorful, 3D animated, kid-friendly",
+  "audience": "children aged 4-10",
+  "music": {
+    "type": "playful superhero",
+    "tempo": "medium",
+    "mood": "energetic and heroic"
+  },
+  "scene": {
+    "environment": "bright fun background with floating hearts, energy sparks, and soft red clouds",
+    "main_character": {
+      "type": "beetroot",
+      "appearance": "cute red beetroot cartoon with big eyes, smiling face, tiny hands and feet",
+      "accessories": ["red superhero cape", "hero mask"],
+      "emotion": "confident, friendly, energetic"
+    }
+  },
+  "animation_sequence": [
+    {
+      "time": "0-2s",
+      "action": "the beetroot rolls into the scene from the side, bouncing playfully before stopping at the center",
+      "visual_effects": ["cartoon squash and stretch", "motion lines"],
+      "dialogue": "Zoom! I am Benny the Beetroot!"
+    },
+    {
+      "time": "2-3.5s",
+      "action": "the beetroot spins and a red superhero cape appears as it strikes a hero pose",
+      "visual_effects": ["sparkle burst", "hero glow"],
+      "dialogue": "I make your blood strong!"
+    },
+    {
+      "time": "3.5-5s",
+      "action": "a happy cartoon heart appears and beats gently as the beetroot gives a thumbs up",
+      "visual_effects": ["heart pulse animation", "soft red glow"],
+      "dialogue": "I help your heart work better!"
+    },
+    {
+      "time": "5-7s",
+      "action": "the beetroot jumps happily with energy sparks around, waving and smiling",
+      "visual_effects": ["energy lines", "star pops"],
+      "dialogue": "I make you feel active!"
+    }
+  ],
+  "camera": {
+    "movement": "smooth pans with playful zoom-ins",
+    "focus": "centered on the beetroot superhero"
+  },
+  "text_style": {
+    "font": "rounded playful font",
+    "color": "bright white with soft outlines",
+    "size": "large and readable for kids"
+  },
+  "output": {
+    "resolution": "1080p",
+    "aspect_ratio": "9:16",
+    "background": "simple and uncluttered for easy understanding"
+  }
+}

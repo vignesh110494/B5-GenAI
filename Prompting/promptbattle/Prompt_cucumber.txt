@@ -1,0 +1,66 @@
+{
+  "task": "text_to_video",
+  "duration_seconds": 8,
+  "style": "cartoonistic, colorful, exaggerated motion, 3D animated, kid-friendly",
+  "audience": "children aged 4-10",
+  "music": {
+    "type": "cool and playful",
+    "tempo": "medium",
+    "mood": "refreshing, funny, cheerful"
+  },
+  "scene": {
+    "environment": "bright summer playground background with blue sky, ice cubes, water splashes, bubbles, and soft clouds",
+    "main_character": {
+      "type": "cucumber",
+      "appearance": "cute green cucumber cartoon with big round eyes, smiling mouth, tiny hands and feet",
+      "accessories": ["black sunglasses"],
+      "emotion": "relaxed, funny, friendly"
+    }
+  },
+  "animation_sequence": [
+    {
+      "time": "0-2s",
+      "action": "the cucumber rolls into the scene from the side like a spinning ball, wobbling and bouncing before stopping in the center",
+      "visual_effects": ["cartoon squash and stretch", "rolling motion lines", "fun bounce sound"],
+      "dialogue": "Woohoo! I am Cool Buddy Cucumber!"
+    },
+    {
+      "time": "2-3.5s",
+      "action": "the cucumber slides on sunglasses and snowflakes appear around it",
+      "visual_effects": ["snowflake pops", "cool breeze waves", "blue glow"],
+      "dialogue": "I keep your body cool!"
+    },
+    {
+      "time": "3.5-5s",
+      "action": "the cucumber squeezes itself slightly and water splashes out playfully",
+      "visual_effects": ["water splash animation", "bubble bursts"],
+      "dialogue": "I keep you hydrated!"
+    },
+    {
+      "time": "5-6.5s",
+      "action": "the cucumber sparkles, poses proudly, and gives a shiny smile",
+      "visual_effects": ["sparkle shine", "soft glow effects"],
+      "dialogue": "I make your skin fresh!"
+    },
+    {
+      "time": "6.5-8s",
+      "action": "the cucumber relaxes on a tiny beach chair, pats a happy tummy icon, and waves",
+      "visual_effects": ["smiling tummy icon", "gentle wave motion"],
+      "dialogue": "I help your tummy relax!"
+    }
+  ],
+  "camera": {
+    "movement": "smooth playful pans with gentle zoom-ins",
+    "focus": "always centered on the cucumber character"
+  },
+  "text_style": {
+    "font": "rounded playful font",
+    "color": "white with soft blue outline",
+    "size": "large and easy to read for kids"
+  },
+  "output": {
+    "resolution": "1080p",
+    "aspect_ratio": "9:16",
+    "background": "clean and simple for clear kids comprehension"
+  }
+}

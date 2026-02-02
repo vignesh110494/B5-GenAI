@@ -1,0 +1,65 @@
+{
+  "task": "text_to_video",
+  "duration_seconds": 8,
+  "style": "cartoonistic, colorful, 3D animated, kid-friendly",
+  "audience": "children aged 4-10",
+  "music": {
+    "type": "playful",
+    "tempo": "medium",
+    "mood": "happy and fun"
+  },
+  "scene": {
+    "environment": "bright cheerful background with soft clouds, floating hearts, sparkles, and playful shapes",
+    "main_character": {
+      "type": "tomato",
+      "appearance": "cute red tomato cartoon with big eyes, smiling mouth, tiny hands and feet",
+      "emotion": "cheerful, friendly, caring"
+    }
+  },
+  "animation_sequence": [
+    {
+      "time": "0-2s",
+      "action": "the tomato rolls into the scene from the left, bouncing lightly and laughing",
+      "visual_effects": ["motion lines", "cartoon bounce squash and stretch"],
+      "dialogue": "Hi! I am Tommy the Tomato!"
+    },
+    {
+      "time": "2-4s",
+      "action": "the tomato hugs a big glowing cartoon heart",
+      "visual_effects": ["floating hearts", "soft red glow"],
+      "dialogue": "I keep your heart healthy!"
+    },
+    {
+      "time": "4-5.5s",
+      "action": "the tomato spins happily and sparkles appear on its face",
+      "visual_effects": ["sparkles", "shine effects"],
+      "dialogue": "I make your skin glow!"
+    },
+    {
+      "time": "5.5-7s",
+      "action": "the tomato holds a shield and blocks cartoon germs",
+      "visual_effects": ["funny germs bouncing away", "shield pop animation"],
+      "dialogue": "I protect you from germs!"
+    },
+    {
+      "time": "7-8s",
+      "action": "the tomato splashes gently in water droplets and waves goodbye",
+      "visual_effects": ["water droplets", "cool blue shine"],
+      "dialogue": "I keep your body fresh!"
+    }
+  ],
+  "camera": {
+    "movement": "smooth playful pans and slight zoom-ins",
+    "focus": "centered on the tomato character"
+  },
+  "text_style": {
+    "font": "rounded playful font",
+    "color": "bright white with soft outlines",
+    "size": "large and readable for kids"
+  },
+  "output": {
+    "resolution": "1080p",
+    "aspect_ratio": "9:16",
+    "background": "simple and clean to avoid distraction"
+  }
+}
