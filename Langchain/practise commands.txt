@@ -1,0 +1,9 @@
+ pip install langchain-community => install langchain community (text loader)
+ pip install pymupdf => to load pdf
+ pip install bs4 =>  to load webpage
+ pip install arxiv = > to load research papers or ieee journal
+   6 python .\practice.py
+   7 python .\practice.py
+   8 pip install pypdf => pdf loader
+   9 python .\practice.py
+   pi

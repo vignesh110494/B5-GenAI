@@ -1,0 +1,54 @@
+give me json for the below 
+  and add iilustration in a cartoonistic manner 
+{
+  "task": "text_to_video",
+  "style": "cartoonistic, colorful, kid-friendly, 3D animated look",
+  "audience": "children aged 4-10",
+  "scene_description": {
+    "environment": "bright playful background with soft clouds and cheerful colors",
+    "main_character": {
+      "type": "spinach leaf",
+      "appearance": "green spinach leaf transformed into a cute cartoon character with big expressive eyes and a smiling face",
+      "pose": "lifting dumbbells confidently like a bodybuilder",
+      "emotion": "happy, energetic, strong"
+    },
+    "action": "the spinach character lifts weights easily, showing strength and power in a fun exaggerated cartoon manner",
+    "visual_effects": [
+      "sparkling energy lines around muscles",
+      "soft glowing green aura to represent health",
+      "floating stars and motion lines for power"
+    ]
+  },
+  "benefits_visualized": [
+    {
+      "icon": "muscle",
+      "message": "I make your muscles strong",
+      "visual": "spinach flexing its arms proudly"
+    },
+    {
+      "icon": "shield",
+      "message": "I protect your body from sickness",
+      "visual": "a protective shield forming around the spinach"
+    },
+    {
+      "icon": "bone",
+      "message": "I make your bones healthy",
+      "visual": "strong shiny bones appearing behind the character"
+    },
+    {
+      "icon": "energy",
+      "message": "I give you energy to play",
+      "visual": "lightning bolts and playful jumps showing high energy"
+    }
+  ],
+  "lighting": "soft bright lighting with vibrant colors",
+  "camera": {
+    "angle": "slightly low angle to make the character look powerful",
+    "focus": "centered on the spinach character"
+  },
+  "output_requirements": {
+    "resolution": "high",
+    "background": "clean and simple for kids comprehension",
+    "text_style": "rounded playful font, easy to read"
+  }
+}

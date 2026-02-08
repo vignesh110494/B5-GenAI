@@ -1,0 +1,72 @@
+{
+  "section": "closure",
+  "speaker": "vegetable_characters_group",
+  "scene_setup": {
+    "environment": "colorful cartoon garden",
+    "camera": "wide shot showing all vegetables together"
+  },
+  "characters": [
+    {
+      "name": "Carrot",
+      "action": "adjusts glasses and waves",
+      "expression": "excited and proud"
+    },
+    {
+      "name": "Spinach",
+      "action": "flexes muscles and smiles",
+      "expression": "strong and confident"
+    },
+    {
+      "name": "Tomato",
+      "action": "rolls forward and hugs a heart",
+      "expression": "loving and cheerful"
+    },
+    {
+      "name": "Beetroot",
+      "action": "flies slightly with cape fluttering",
+      "expression": "heroic and happy"
+    },
+    {
+      "name": "Cucumber",
+      "action": "adjusts sunglasses and relaxes",
+      "expression": "cool and calm"
+    },
+    {
+      "name": "Sweet Potato",
+      "action": "glows like a charged battery",
+      "expression": "energetic and friendly"
+    }
+  ],
+  "spoken_closure_dialogue": {
+    "speaker_mode": "all_vegetables_together",
+    "text": "Yay kids! We are your veggie friends! We help you grow strong, smart, healthy, and happy every single day!",
+    "tone": "cheerful, encouraging, friendly",
+    "style": "simple words for kids"
+  },
+  "benefit_recap": {
+    "presentation": "icons floating around all vegetables",
+    "icons": [
+      "💪 strength",
+      "🛡️ protection",
+      "⚡ energy",
+      "🧠 smart brain",
+      "❤️ healthy heart",
+      "😊 happiness"
+    ]
+  },
+  "visual_effects": [
+    "sparkles",
+    "floating stars",
+    "soft rainbow glow around vegetables"
+  ],
+  "call_to_action": {
+    "speaker_mode": "vegetables_take_turns",
+    "spoken_text": "Promise us you’ll eat healthy vegetables every day!",
+    "emotion": "playful and motivating"
+  },
+  "ending_frame": {
+    "speaker_mode": "all_vegetables_wave",
+    "spoken_text": "Healthy food makes you strong and happy. Bye-bye!",
+    "animation": "all vegetables wave as text fades out with twinkling stars"
+  }
+}

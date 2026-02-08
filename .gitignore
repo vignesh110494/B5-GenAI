@@ -1,0 +1,9 @@
+# Environment variables
+.env
+
+# code folder and files
+Prompting/Lungi session with ranjith bro _ video creation using image/
+Prompting/promptbattle-noncompressed/
+
+# Virtual environments
+genaipyenv3.11/

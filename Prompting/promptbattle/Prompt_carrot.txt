@@ -1,0 +1,97 @@
+carrot:
+{
+  "role": {
+    "system": "You are a professional text-to-video prompt engineer specializing in animated educational content."
+  },
+  "task": {
+    "type": "text_to_video",
+    "duration_seconds": 8,
+    "goal": "Create a short animated video where a cartoon carrot character talks about its health benefits in a fun and engaging way."
+  },
+  "context": {
+    "theme": "Healthy eating awareness",
+    "primary_subject": "Carrot",
+    "audience": "children and general audience",
+    "tone": "cheerful, friendly, educational"
+  },
+  "visual_style": {
+    "animation_style": "cartoonistic",
+    "character_style": "cute, expressive, anthropomorphic carrot",
+    "color_palette": "bright orange with vibrant greens",
+    "lighting": "soft, warm, cheerful"
+  },
+  "character": {
+    "name": "Carro",
+    "appearance": {
+      "body": "tall orange carrot body",
+      "face": "big animated eyes, smiling mouth",
+      "hair": "green leafy top",
+      "accessories": "optional round glasses"
+    },
+    "personality": [
+      "energetic",
+      "friendly",
+      "helpful"
+    ]
+  },
+  "scene_breakdown": [
+    {
+      "time": "0–2s",
+      "scene": "Carrot character pops up from soil and waves at the camera",
+      "action": "smiling and greeting",
+      "camera": "medium shot, slight zoom-in"
+    },
+    {
+      "time": "2–5s",
+      "scene": "Carrot speaks about eyesight and immunity benefits",
+      "action": "mouth synced to speech, eye icons sparkle, glowing shield appears",
+      "camera": "close-up on face and upper body"
+    },
+    {
+      "time": "5–8s",
+      "scene": "Carrot gives a thumbs-up and jumps happily",
+      "action": "health icons float around, carrot smiles confidently",
+      "camera": "wide shot with playful motion"
+    }
+  ],
+  "dialogue": {
+    "language": "English",
+    "voice": {
+      "gender": "neutral",
+      "style": "cartoon voice",
+      "emotion": "happy"
+    },
+    "lines": [
+      "Hi! I'm a carrot!",
+      "Eat me to make your eyes strong and boost your immunity!",
+      "Stay healthy and happy!"
+    ]
+  },
+  "environment": {
+    "background": "bright Indian vegetable garden",
+    "elements": [
+      "soft clouds",
+      "green plants",
+      "warm sunlight"
+    ]
+  },
+  "constraints": {
+    "avoid": [
+      "realistic human features",
+      "dark colors",
+      "text-heavy subtitles"
+    ],
+    "realism_level": "low"
+  },
+  "output_requirements": {
+    "format": "mp4",
+    "resolution": "high",
+    "frame_rate": "smooth",
+    "audio": "voice + light playful background music"
+  },
+  "quality_checks": [
+    "clear lip-sync with dialogue",
+    "cartoon carrot is central focus",
+    "benefits are visually understandable"
+  ]
+}
