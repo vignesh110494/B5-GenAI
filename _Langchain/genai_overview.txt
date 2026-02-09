@@ -1,0 +1,15 @@
+Generative AI (Gen AI) Overview
+
+Generative Artificial Intelligence refers to models that can generate new content such as text, images, audio, video, and code.
+
+Key Characteristics:
+- Uses large datasets for training
+- Learns patterns and structures
+- Generates human-like outputs
+
+Examples of Gen AI:
+- Chatbots (ChatGPT)
+- Image generators (DALL·E, Midjourney)
+- Code assistants (Copilot)
+
+Gen AI is widely used in education, healthcare, finance, and entertainment.
