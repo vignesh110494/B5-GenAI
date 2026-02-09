@@ -1,0 +1,14 @@
+Section	Description	Common Use / Application
+Section 124A	Sedition	Used for acts that bring hatred or contempt toward the Government.
+Section 302	Punishment for Murder	Applied in cases where a person intentionally causes the death of another.
+Section 304B	Dowry Death	Used when a woman dies under abnormal circumstances related to dowry harassment.
+Section 307	Attempt to Murder	Applied when an act is done with the intent to kill, but the victim survives.
+Section 319	Hurt	Used for causing bodily pain, disease, or infirmity to any person.
+Section 354	Outraging the Modesty of a Woman	Applied in cases of assault or criminal force against a woman's dignity.
+Section 375/376	Rape / Punishment for Rape	Used for cases involving non-consensual sexual intercourse.
+Section 378/379	Theft / Punishment for Theft	Applied when movable property is taken dishonestly without consent.
+Section 390/392	Robbery / Punishment for Robbery	Used when theft involves causing fear of instant death or hurt.
+Section 406	Criminal Breach of Trust	Applied when someone misappropriates property entrusted to them.
+Section 415/420	Cheating / Fraud	Used for dishonestly inducing a person to deliver property or money.
+Section 498A	Cruelty by Husband or Relatives	Applied in cases of domestic violence or harassment of a married woman.
+Section 499/500	Defamation	Used when someone harms the reputation of another through words or signs.
