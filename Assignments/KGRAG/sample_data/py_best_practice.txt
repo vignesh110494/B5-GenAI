@@ -1,0 +1,268 @@
+
+PYTHON BEST PRACTICES WITH EXAMPLES
+=================================
+
+--------------------------------------------------
+1. CODE STYLE & FORMATTING (PEP 8)
+--------------------------------------------------
+❌ Bad:
+x=10
+y=20
+print(x+y)
+
+✅ Good:
+x = 10
+y = 20
+print(x + y)
+
+--------------------------------------------------
+2. MEANINGFUL VARIABLE NAMES
+--------------------------------------------------
+❌ Bad:
+a = 100
+b = 0.18
+
+✅ Good:
+price = 100
+tax_rate = 0.18
+
+--------------------------------------------------
+3. PROJECT STRUCTURE
+--------------------------------------------------
+❌ Bad:
+all_code.py
+
+✅ Good:
+project/
+│── app/
+│   ├── main.py
+│   ├── services.py
+│── tests/
+│── requirements.txt
+
+--------------------------------------------------
+4. SMALL & FOCUSED FUNCTIONS
+--------------------------------------------------
+❌ Bad:
+def process(data):
+    total = 0
+    for x in data:
+        total += x
+    print(total)
+
+✅ Good:
+def calculate_total(numbers: list[int]) -> int:
+    return sum(numbers)
+
+--------------------------------------------------
+5. TYPE HINTS
+--------------------------------------------------
+❌ Bad:
+def add(a, b):
+    return a + b
+
+✅ Good:
+def add(a: int, b: int) -> int:
+    return a + b
+
+--------------------------------------------------
+6. AVOID GLOBAL VARIABLES
+--------------------------------------------------
+❌ Bad:
+count = 0
+def increment():
+    global count
+    count += 1
+
+✅ Good:
+def increment(count: int) -> int:
+    return count + 1
+
+--------------------------------------------------
+7. CONSTANTS
+--------------------------------------------------
+✅ Best Practice:
+MAX_RETRIES = 3
+TIMEOUT_SECONDS = 30
+
+--------------------------------------------------
+8. DATA STRUCTURE SELECTION
+--------------------------------------------------
+List:
+items = ["apple", "banana"]
+
+Tuple (immutable):
+POINT = (10, 20)
+
+Set (unique):
+unique_ids = {1, 2, 3}
+
+Dict:
+user = {"name": "Vignesh", "age": 30}
+
+--------------------------------------------------
+9. ERROR HANDLING
+--------------------------------------------------
+❌ Bad:
+try:
+    x = int(value)
+except:
+    pass
+
+✅ Good:
+try:
+    x = int(value)
+except ValueError as e:
+    raise ValueError("Invalid integer") from e
+
+--------------------------------------------------
+10. CUSTOM EXCEPTIONS
+--------------------------------------------------
+class PaymentError(Exception):
+    pass
+
+raise PaymentError("Payment failed")
+
+--------------------------------------------------
+11. LOGGING INSTEAD OF PRINT
+--------------------------------------------------
+❌ Bad:
+print("App started")
+
+✅ Good:
+import logging
+logging.basicConfig(level=logging.INFO)
+logging.info("App started")
+
+--------------------------------------------------
+12. DOCSTRINGS
+--------------------------------------------------
+def multiply(a: int, b: int) -> int:
+    """
+    Multiply two numbers.
+
+    Args:
+        a (int): First number
+        b (int): Second number
+
+    Returns:
+        int: Product
+    """
+    return a * b
+
+--------------------------------------------------
+13. COMMENTS (WHY, NOT WHAT)
+--------------------------------------------------
+❌ Bad:
+i = i + 1  # increment i
+
+✅ Good:
+i += 1  # Move to next record index
+
+--------------------------------------------------
+14. LIST COMPREHENSIONS
+--------------------------------------------------
+❌ Bad:
+squares = []
+for i in range(10):
+    squares.append(i * i)
+
+✅ Good:
+squares = [i * i for i in range(10)]
+
+--------------------------------------------------
+15. GENERATORS FOR LARGE DATA
+--------------------------------------------------
+❌ Bad:
+data = [i for i in range(1000000)]
+
+✅ Good:
+data = (i for i in range(1000000))
+
+--------------------------------------------------
+16. DATACLASSES
+--------------------------------------------------
+from dataclasses import dataclass
+
+@dataclass
+class User:
+    name: str
+    age: int
+
+--------------------------------------------------
+17. TESTING (pytest)
+--------------------------------------------------
+def add(a: int, b: int) -> int:
+    return a + b
+
+def test_add():
+    assert add(2, 3) == 5
+
+--------------------------------------------------
+18. SECURITY (NO HARDCODED SECRETS)
+--------------------------------------------------
+❌ Bad:
+API_KEY = "abcd1234"
+
+✅ Good:
+import os
+API_KEY = os.getenv("API_KEY")
+
+--------------------------------------------------
+19. DEPENDENCY MANAGEMENT
+--------------------------------------------------
+requirements.txt:
+requests==2.31.0
+numpy==1.26.3
+
+--------------------------------------------------
+20. GIT COMMIT MESSAGES
+--------------------------------------------------
+❌ Bad:
+fix bug
+
+✅ Good:
+Fix user login validation error
+
+--------------------------------------------------
+21. PYTHONIC PRINCIPLES
+--------------------------------------------------
+❌ Bad:
+if x == True:
+
+✅ Good:
+if x:
+
+--------------------------------------------------
+22. READABILITY OVER CLEVERNESS
+--------------------------------------------------
+❌ Bad:
+result=lambda x:x*2
+
+✅ Good:
+def double(value: int) -> int:
+    return value * 2
+
+--------------------------------------------------
+23. MAIN GUARD
+--------------------------------------------------
+def main():
+    print("App running")
+
+if __name__ == "__main__":
+    main()
+
+--------------------------------------------------
+24. FINAL CHECKLIST
+--------------------------------------------------
+✓ Clean formatting
+✓ Clear names
+✓ Type hints
+✓ Proper error handling
+✓ Logging enabled
+✓ Tests written
+✓ Secure secrets
+
+--------------------------------------------------
+END OF DOCUMENT
+--------------------------------------------------
