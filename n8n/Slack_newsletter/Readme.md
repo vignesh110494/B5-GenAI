@@ -49,7 +49,7 @@ Send Email (Gmail)
 Triggers the workflow whenever a new message is posted in:
 
 ```
-Channel ID: C0AGECFCYLS
+Channel ID: all-vignesh-workspace          
 ```
 
 ### Required Credential
