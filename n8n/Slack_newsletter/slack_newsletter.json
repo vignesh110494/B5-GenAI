@@ -1,0 +1,285 @@
+{
+  "name": "Slack_newsletter_final",
+  "nodes": [
+    {
+      "parameters": {
+        "trigger": [
+          "message"
+        ],
+        "channelId": {
+          "__rl": true,
+          "value": "C0AGECFCYLS",
+          "mode": "list",
+          "cachedResultName": "all-vignesh-workspace"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.slackTrigger",
+      "typeVersion": 1,
+      "position": [
+        -352,
+        -32
+      ],
+      "id": "de1b9eb9-a922-40ed-ad02-b032461ed71c",
+      "name": "Slack Trigger",
+      "webhookId": "b7b80cb4-3a47-4b3e-ace2-e6721f2f5bf3",
+      "credentials": {
+        "slackApi": {
+          "id": "faM3fUUvOpDB93Bd",
+          "name": "Slack account 5"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "leftValue": "={{$json.bot_id}}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "empty",
+                "singleValue": true
+              },
+              "id": "9c59552a-1df6-421c-949f-c6f5f81c3cf9"
+            },
+            {
+              "leftValue": "={{$json.subtype}}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "empty",
+                "singleValue": true
+              },
+              "id": "4b923193-d56f-4d52-902c-c9b6f1ec64f4"
+            },
+            {
+              "leftValue": "={{$json.user}}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              },
+              "id": "7cf4bde9-6f67-4b93-9a07-0da6153566c7"
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        -128,
+        -32
+      ],
+      "id": "47ee1fd9-ec79-45f1-8c4e-af1b2c7de314",
+      "name": "Filter Human Messages"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{$json.text}}",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "You are a senior editor of a traditional Indian newspaper called NEWS_LETTER.  Return ONLY valid JSON. No markdown. No explanation.  Format:  {   \"masthead\": \"string\",   \"date\": \"DD Month YYYY\",   \"lead_story\": {     \"headline\": \"string\",     \"subheadline\": \"string\",     \"byline\": \"By Reporter Name\",     \"dateline\": \"CITY \n DATE\",     \"content\": \"4-6 paragraph detailed news report\",     \"image_url\": \"https://images.unsplash.com/...\",     \"image_caption\": \"string\"   },   \"secondary_stories\": [     {       \"headline\": \"string\",       \"content\": \"2-3 paragraph report\",       \"image_url\": \"https://images.unsplash.com/...\",       \"image_caption\": \"string\"     }   ],   \"editorial_note\": \"short editorial style closing note\" }  Ensure: - Exactly 2 secondary stories - Professional, neutral journalism tone - image_url must be Unsplash direct link - No trailing commas and add the news on 2026 jan 1 - 30"
+            }
+          ]
+        },
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.9,
+      "position": [
+        112,
+        -32
+      ],
+      "id": "07741e36-8b79-48c1-8dfa-3723e446a6e1",
+      "name": "Basic LLM Chain"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1-mini"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        112,
+        160
+      ],
+      "id": "30d4d6eb-3148-43cd-8654-1469fb5090b2",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "v9KGsIK3Fvr15YJg",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "value": "C0AGECFCYLS",
+          "mode": "list",
+          "cachedResultName": "all-vignesh-workspace"
+        },
+        "text": "={{ $json.slackMessage }}",
+        "otherOptions": {
+          "includeLinkToWorkflow": false
+        }
+      },
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.4,
+      "position": [
+        720,
+        -32
+      ],
+      "id": "a792ee0c-d6e0-47ea-80e9-d66b7566bfbd",
+      "name": "Send to Slack",
+      "webhookId": "26da217c-4c55-417b-97b4-937d311d7a57",
+      "credentials": {
+        "slackApi": {
+          "id": "faM3fUUvOpDB93Bd",
+          "name": "Slack account 5"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "vigneshmoorthy11@gmail.com",
+        "subject": "={{ $('Format Newsletter').item.json.subject }}",
+        "message": "={{ $('Format Newsletter').item.json.html }}",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        928,
+        0
+      ],
+      "id": "299f715b-5022-4991-bd60-89091032ff37",
+      "name": "Send Email",
+      "webhookId": "8f9f4258-6b6a-40a0-a144-90234799ec6e",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "EcF9KcUbRWrnd5cS",
+          "name": "SendemailAPI"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const raw = $json.text || $json.output || $json;\n\nlet paper;\n\ntry {\n  paper = typeof raw === 'string' ? JSON.parse(raw) : raw;\n} catch (e) {\n  throw new Error(\"Invalid JSON from LLM.\");\n}\n\n// =========================\n// SLACK FORMAT\n// =========================\n\nlet slackMessage = `*${paper.masthead || \"Daily News\"}*\\n`;\nslackMessage += `_${paper.date || \"\"}_\\n\\n`;\n\nslackMessage += `*${paper.lead_story.headline}*\\n`;\nslackMessage += `_${paper.lead_story.subheadline}_\\n\\n`;\nslackMessage += `${paper.lead_story.byline}\\n`;\nslackMessage += `${paper.lead_story.dateline}\\n\\n`;\nslackMessage += `${paper.lead_story.content}\\n\\n`;\n\nif (paper.lead_story.image_url) {\n  slackMessage += `${paper.lead_story.image_url}\\n`;\n  slackMessage += `_${paper.lead_story.image_caption}_\\n\\n`;\n}\n\npaper.secondary_stories.forEach(story => {\n  slackMessage += `*${story.headline}*\\n`;\n  slackMessage += `${story.content}\\n`;\n  if (story.image_url) {\n    slackMessage += `${story.image_url}\\n`;\n    slackMessage += `_${story.image_caption}_\\n`;\n  }\n  slackMessage += \"\\n\";\n});\n\nslackMessage += `_${paper.editorial_note}_`;\n\n\n// =========================\n// HTML NEWSPAPER FORMAT\n// =========================\n\nlet html = `\n<div style=\"font-family: Georgia, serif; max-width: 900px; margin: auto; background:#ffffff; padding:20px; border:1px solid #ddd;\">\n  \n  <div style=\"text-align:center; border-bottom:3px solid black; padding-bottom:10px;\">\n    <h1 style=\"font-size:48px; margin:0;\">${paper.masthead}</h1>\n    <p style=\"margin:5px 0; font-size:14px;\">${paper.date}</p>\n  </div>\n\n  <div style=\"margin-top:30px;\">\n    <h2 style=\"font-size:32px; margin-bottom:5px;\">${paper.lead_story.headline}</h2>\n    <h3 style=\"font-weight:normal; color:gray;\">${paper.lead_story.subheadline}</h3>\n    <p style=\"font-size:14px;\"><b>${paper.lead_story.byline}</b> | ${paper.lead_story.dateline}</p>\n  </div>\n`;\n\nif (paper.lead_story.image_url) {\n  html += `\n    <img src=\"${paper.lead_story.image_url}\" style=\"width:100%; margin-top:15px;\" />\n    <p style=\"font-size:12px; color:gray;\"><i>${paper.lead_story.image_caption}</i></p>\n  `;\n}\n\nhtml += `\n  <div style=\"column-count:2; column-gap:30px; margin-top:20px; font-size:16px; line-height:1.6;\">\n    ${paper.lead_story.content.replace(/\\n/g, \"<br><br>\")}\n  </div>\n\n  <hr style=\"margin:40px 0; border:1px solid #ccc;\"/>\n`;\n\npaper.secondary_stories.forEach(story => {\n  html += `\n    <h3 style=\"font-size:22px;\">${story.headline}</h3>\n  `;\n\n  if (story.image_url) {\n    html += `\n      <img src=\"${story.image_url}\" style=\"width:100%; margin-top:10px;\" />\n      <p style=\"font-size:12px; color:gray;\"><i>${story.image_caption}</i></p>\n    `;\n  }\n\n  html += `\n    <div style=\"font-size:15px; line-height:1.6;\">\n      ${story.content.replace(/\\n/g, \"<br><br>\")}\n    </div>\n    <hr style=\"margin:30px 0; border:1px solid #eee;\"/>\n  `;\n});\n\nhtml += `\n  <div style=\"text-align:center; font-style:italic; margin-top:40px; font-size:14px;\">\n    ${paper.editorial_note}\n  </div>\n</div>\n`;\n\nreturn [{\n  json: {\n    slackMessage,\n    html,\n    subject: paper.lead_story.headline || \"Daily Newspaper\"\n  }\n}];"
+      },
+      "id": "78057a35-9859-4b72-8995-5eaf35690df3",
+      "name": "Format Newsletter",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        512,
+        -32
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Slack Trigger": {
+      "main": [
+        [
+          {
+            "node": "Filter Human Messages",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter Human Messages": {
+      "main": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Basic LLM Chain": {
+      "main": [
+        [
+          {
+            "node": "Format Newsletter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send to Slack": {
+      "main": [
+        [
+          {
+            "node": "Send Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Newsletter": {
+      "main": [
+        [
+          {
+            "node": "Send to Slack",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "8ae8f5c2-9ea8-4b49-bdc0-cfa012839e21",
+  "meta": {
+    "instanceId": "88d9c84d5829799d3d1719af402d4f7af8ee3ca4582e9266218208def1f1c7fb"
+  },
+  "id": "DQaFrzbljecxgKQS",
+  "tags": []
+}
